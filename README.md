@@ -21,7 +21,7 @@ Download the provided [resources](#resources) before proceeding. Ensure the scri
 
 
 ### Assign Static IP <a name="staticip"></a>
-After finishing this method, ensure the 
+**After finishing this method, ensure these settings are reverted to Automatic (DHCP).**
 
 <details>
     <summary><b>Windows</b></summary>
@@ -112,3 +112,5 @@ This will likely take many tries. Running multiple terminal instances is highly 
 11. Copy the mfg.dat file and all three *.der files to the same directory as **mfg_dat_decode**
 12. Run mfg_dat_decode
 13. If there's no error, the certificates will have been extracted and decoded successfully.
+
+**Change the computer's IP back to Automatic/DHCP.**
