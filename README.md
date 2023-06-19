@@ -4,8 +4,8 @@ Exploit works on the BGW210. Status on other devices is unknown.
 ## Resources
 1. [3.18.2_en.bin](http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_3.18.2/spTurquoise210-700_3.18.2_ENG.bin) (Optional if BGW firmware =< 3.18.2)
 2. [mfg_dat_decode](https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html)
-3. [get_mfg_dat.sh]([https://pastebin.com/7FQxXPdV](https://raw.githubusercontent.com/mozzarellathicc/attcerts/main/get_mfg_dat.sh)
-4. [get_rootcerts.sh]([https://pastebin.com/7FQxXPdV](https://raw.githubusercontent.com/mozzarellathicc/attcerts/main/get_rootcerts.sh)
+3. [get_mfg_dat.sh](https://raw.githubusercontent.com/mozzarellathicc/attcerts/main/get_mfg_dat.sh)
+4. [get_rootcerts.sh](https://raw.githubusercontent.com/mozzarellathicc/attcerts/main/get_rootcerts.sh)
 
 ## Prerequisites <a name="prerequisites"></a>
 1. Residential Gateway (RG) vulnerable to the muhttpd path traversal exploit
