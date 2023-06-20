@@ -114,3 +114,14 @@ This will likely take many tries. Running multiple terminal instances is highly 
 13. If there's no error, the certificates will have been extracted and decoded successfully.
 
 **Change the computer's IP back to Automatic/DHCP.**
+
+## Credits
+- [8311 Discord Server](https://discord.gg/c8HGajUEGk)
+    - @ChrisEric1 CECL#5569 – 3.18.2_en.bin + CVE tip
+    - @tofu#6072 – CVE tip
+    - @redbeard#3977 – Documenting their experiment with this exploit
+    - @up_n_atom – *.der file locations
+    - @jack2333 – Helped troubleshooting, lots of suggestions
+    - @ibutsu – Recursive script suggestion
+- [Derek Abdine](https://derekabdine.com/blog/2022-arris-advisory.html) – CVE Write-up
+- [devicelocksmith](https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html) – mfg_dat_decode
