@@ -1,6 +1,7 @@
 # BGW210 4.22.5 Cert Extraction
 
 Exploit works on the BGW210. Status on other devices is unknown.
+<a id="toc"></a>
 - [Resources](#resources)
 - [Prerequisites](#prerequisites)
 - [Initial Setup](#initial-setup)
@@ -11,7 +12,6 @@ Exploit works on the BGW210. Status on other devices is unknown.
 - [Credits](#credits)
 
 ## Resources<a id="resources"></a>
-
 1. [3.18.2_en.bin](http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_3.18.2/spTurquoise210-700_3.18.2_ENG.bin)
    - (Optional if BGW firmware =< 3.18.2)
    - `http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_3.18.2/spTurquoise210-700_3.18.2_ENG.bin`
@@ -20,23 +20,23 @@ Exploit works on the BGW210. Status on other devices is unknown.
 3. [get_mfg_dat.sh](https://raw.githubusercontent.com/mozzarellathicc/attcerts/main/get_mfg_dat.sh)
 4. [get_rootcerts.sh](https://raw.githubusercontent.com/mozzarellathicc/attcerts/main/get_rootcerts.sh)
 
+[↑ Return to menu](#toc)
 ## Prerequisites<a id="prerequisites"></a>
-
 1. Residential Gateway (RG) vulnerable to the muhttpd path traversal exploit
    - This guide was written for the BGW210.
    - It has not been tested on the BGW320 or any of the NVG line.
 2. Device with an ethernet port
 3. Basic knowledge of commandline
 
+[↑ Return to menu](#toc)
 ## Initial Setup<a id="init"></a>
-
 Download the provided [resources](#resources) before proceeding. Ensure the scripts are executable by running:
 
 - `chmod +x get_mfg_dat.sh`
 - `chmod +x get_rootcerts.sh`
 
+[↑ Return to menu](#toc)
 ### Assign Static IP<a id="staticip"></a>
-
 **After finishing this method, ensure these settings are reverted to Automatic (DHCP).**
 
 <a id="windows"></a>
@@ -105,8 +105,8 @@ Download the provided [resources](#resources) before proceeding. Ensure the scri
     </ol>
 </details>
 
+[↑ Return to menu](#toc)
 ### Prepare the RG<a id="prepare-rg"></a>
-
 1. Unplug the power cable
 2. If attached, unplug the Ethernet cable connected to the ONT port
 3. Connect computer's Ethernet port to one of the **Ethernet ports** on the RG. Do **not** connect it to the ONT.
@@ -120,15 +120,15 @@ Download the provided [resources](#resources) before proceeding. Ensure the scri
    - `curl --ignore-content-length -X"GET a/etc/hosts" http://192.168.1.254:80`
    If the hosts file is printed, the exploit will work.
 
+[↑ Return to menu](#toc)
 ## Extract the \*.der files<a id="extract-der"></a>
-
 To decode mfg.dat, you'll need to download the attroot2031.der, attsubca2021.der, and attsubca2030.der files.
 From the computer's terminal, run:
 
 `./get_rootcerts.sh`
 
+[↑ Return to menu](#toc)
 ## Extract mfg.dat<a id="extract-mfg"></a>
-
 This will likely take many tries. Running multiple terminal instances is highly recommended (6-8 should be enough).
 
 1. Unplug the RG's power cable.
@@ -143,8 +143,8 @@ This will likely take many tries. Running multiple terminal instances is highly 
 
 **Change the computer's IP back to Automatic/DHCP.**
 
+[↑ Return to menu](#toc)
 ## Credits<a id="credits"></a>
-
 - [8311 Discord Server](https://discord.gg/c8HGajUEGk)
   - @ChrisEric1 CECL#5569 – 3.18.2_en.bin + CVE tip
   - @ibutsu – Lots of scripting help
@@ -154,3 +154,5 @@ This will likely take many tries. Running multiple terminal instances is highly 
   - @up_n_atom – \*.der file locations
 - [Derek Abdine](https://derekabdine.com/blog/2022-arris-advisory.html) – CVE Write-up
 - [devicelocksmith](https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html) – mfg_dat_decode
+
+[↑ Return to menu](#toc)
