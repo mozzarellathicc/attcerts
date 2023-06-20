@@ -130,7 +130,7 @@ This will likely take many tries. Running multiple terminal instances is highly 
     - @ibutsu – Lots of scripting help
     - @jack2333 – Lots of help with troubleshooting and testing
     - @redbeard#3977 – Documenting their experiment with this exploit
-    - @tofu#6072 – CVE tip
+    - @tofu#6072 – Initial CVE tip to @redbeard
     - @up_n_atom – *.der file locations
 - [Derek Abdine](https://derekabdine.com/blog/2022-arris-advisory.html) – CVE Write-up
 - [devicelocksmith](https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html) – mfg_dat_decode
