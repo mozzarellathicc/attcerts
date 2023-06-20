@@ -2,16 +2,16 @@
 
 Exploit works on the BGW210. Status on other devices is unknown.
 <a id="toc"></a>
-- [Resources](#resources)
-- [Prerequisites](#prerequisites)
-- [Initial Setup](#initial-setup)
-  - [Assign Static IP](#assign-static-ip)
-  - [Prepare the RG](#prepare-the-rg)
-- [Extract the \*.der files](#extract-the-der-files)
-- [Extract mfg.dat](#extract-mfgdat)
-- [Credits](#credits)
+- [Resources](#user-content-resources)
+- [Prerequisites](#user-content-prerequisites)
+- [Initial Setup](#user-content-initial-setup)
+  - [Assign Static IP](#user-content-assign-static-ip)
+  - [Prepare the RG](#user-content-prepare-the-rg)
+- [Extract the \*.der files](#user-content-extract-the-der-files)
+- [Extract mfg.dat](#user-content-extract-mfgdat)
+- [Credits](#user-content-credits)
 
-## Resources<a id="resources"></a>
+## Resources
 1. [3.18.2_en.bin](http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_3.18.2/spTurquoise210-700_3.18.2_ENG.bin)
    - (Optional if BGW firmware =< 3.18.2)
    - `http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_3.18.2/spTurquoise210-700_3.18.2_ENG.bin`
@@ -21,7 +21,7 @@ Exploit works on the BGW210. Status on other devices is unknown.
 4. [get_rootcerts.sh](https://raw.githubusercontent.com/mozzarellathicc/attcerts/main/get_rootcerts.sh)
 
 [↑ Return to menu](#toc)
-## Prerequisites<a id="prerequisites"></a>
+## Prerequisites
 1. Residential Gateway (RG) vulnerable to the muhttpd path traversal exploit
    - This guide was written for the BGW210.
    - It has not been tested on the BGW320 or any of the NVG line.
@@ -29,14 +29,14 @@ Exploit works on the BGW210. Status on other devices is unknown.
 3. Basic knowledge of commandline
 
 [↑ Return to menu](#toc)
-## Initial Setup<a id="init"></a>
+## Initial Setup
 Download the provided [resources](#resources) before proceeding. Ensure the scripts are executable by running:
 
 - `chmod +x get_mfg_dat.sh`
 - `chmod +x get_rootcerts.sh`
 
 [↑ Return to menu](#toc)
-### Assign Static IP<a id="staticip"></a>
+### Assign Static IP
 **After finishing this method, ensure these settings are reverted to Automatic (DHCP).**
 
 <a id="windows"></a>
@@ -106,7 +106,7 @@ Download the provided [resources](#resources) before proceeding. Ensure the scri
 </details>
 
 [↑ Return to menu](#toc)
-### Prepare the RG<a id="prepare-rg"></a>
+### Prepare the RG
 1. Unplug the power cable
 2. If attached, unplug the Ethernet cable connected to the ONT port
 3. Connect computer's Ethernet port to one of the **Ethernet ports** on the RG. Do **not** connect it to the ONT.
@@ -121,14 +121,14 @@ Download the provided [resources](#resources) before proceeding. Ensure the scri
    If the hosts file is printed, the exploit will work.
 
 [↑ Return to menu](#toc)
-## Extract the \*.der files<a id="extract-der"></a>
+## Extract the \*.der files
 To decode mfg.dat, you'll need to download the attroot2031.der, attsubca2021.der, and attsubca2030.der files.
 From the computer's terminal, run:
 
 `./get_rootcerts.sh`
 
 [↑ Return to menu](#toc)
-## Extract mfg.dat<a id="extract-mfg"></a>
+## Extract mfg.dat
 This will likely take many tries. Running multiple terminal instances is highly recommended (6-8 should be enough).
 
 1. Unplug the RG's power cable.
@@ -144,7 +144,7 @@ This will likely take many tries. Running multiple terminal instances is highly 
 **Change the computer's IP back to Automatic/DHCP.**
 
 [↑ Return to menu](#toc)
-## Credits<a id="credits"></a>
+## Credits
 - [8311 Discord Server](https://discord.gg/c8HGajUEGk)
   - @ChrisEric1 CECL#5569 – 3.18.2_en.bin + CVE tip
   - @ibutsu – Lots of scripting help
