@@ -2,8 +2,11 @@
 Exploit works on the BGW210. Status on other devices is unknown.
 
 ## Resources
-1. [3.18.2_en.bin](http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_3.18.2/spTurquoise210-700_3.18.2_ENG.bin) (Optional if BGW firmware =< 3.18.2)
+1. [3.18.2_en.bin](http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_3.18.2/spTurquoise210-700_3.18.2_ENG.bin)
+    - (Optional if BGW firmware =< 3.18.2)
+    - `http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_3.18.2/spTurquoise210-700_3.18.2_ENG.bin`
 2. [mfg_dat_decode](https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html)
+    - `https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html`
 3. [get_mfg_dat.sh](https://raw.githubusercontent.com/mozzarellathicc/attcerts/main/get_mfg_dat.sh)
 4. [get_rootcerts.sh](https://raw.githubusercontent.com/mozzarellathicc/attcerts/main/get_rootcerts.sh)
 
@@ -96,12 +99,15 @@ Download the provided [resources](#resources) before proceeding. Ensure the scri
     - Click the "Update" link
         - If current firmware version is **below** 3.18.2, skip this step.
         - If current firmware version is **above** 3.18.2, upload the 3.18.2_EN.bin file and wait for the update to complete.
-6. Test if RG is vulnerable to the exploit by making sure the BGW is fully booted, then, in the **computer's** terminal, run:
-    - `curl --ignore-content-length -X"GET a/etc/hosts" http://192.168.1.254:80`. 
-If a hosts file is printed, the exploit will work.
+6. Test if the RG is vulnerable to the exploit. Make sure the BGW is fully booted, then, in the **computer's** terminal, run:
+    - `curl --ignore-content-length -X"GET a/etc/hosts" http://192.168.1.254:80`
+       
+    If the hosts file is printed, the exploit will work.
 
 ## Extract the *.der files
-To decode mfg.dat, you'll need to download the attroot2031.der, attsubca2021.der, and attsubca2030.der files. From the computer's terminal, run:
+To decode mfg.dat, you'll need to download the attroot2031.der, attsubca2021.der, and attsubca2030.der files. 
+From the computer's terminal, run:
+
 `./get_rootcerts.sh`
 
 ## Extract mfg.dat
