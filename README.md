@@ -96,16 +96,19 @@ Download the provided [resources](#resources) before proceeding. Ensure the scri
     - Click the "Update" link
         - If current firmware version is **below** 3.18.2, skip this step.
         - If current firmware version is **above** 3.18.2, upload the 3.18.2_EN.bin file and wait for the update to complete.
-6. Test if RG is vulnerable to the exploit by making sure the BGW is fully booted, then, in the **computer's** terminal, running `printf "GET a/etc/hosts\n\n" | nc 192.168.1.254 80`. If a hosts file is printed, the exploit will work.
+6. Test if RG is vulnerable to the exploit by making sure the BGW is fully booted, then, in the **computer's** terminal, run:
+    - `curl --ignore-content-length -X"GET a/etc/hosts" http://192.168.1.254:80`. 
+If a hosts file is printed, the exploit will work.
 
 ## Extract the *.der files
-1. From the computer's terminal, run `./get_rootcerts.sh`
-   - This will download the necessary attroot2031.der, attsubca2021.der, and attsubca2030.der files.
+To decode mfg.dat, you'll need to download the attroot2031.der, attsubca2021.der, and attsubca2030.der files. From the computer's terminal, run:
+`./get_rootcerts.sh`
 
 ## Extract mfg.dat
 This will likely take many tries. Running multiple terminal instances is highly recommended (6-8 should be enough).
 1. Unplug the RG's power cable.
-2. On each terminal, run `./get_mfg_dat.sh`.
+2. On each terminal, run: 
+    - `./get_mfg_dat.sh`.
 3. Plug in the RG's power cable again.
 4. Repeat until successful. The mfg.dat file should be bigger than 200kb. 
 5. Stop the script by either exiting the terminal(s) or pressing `Ctrl+C`.
