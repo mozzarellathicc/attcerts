@@ -1,6 +1,9 @@
 # BGW210 4.22.5 Cert Extraction
 
 Exploit works on the BGW210. Status on other devices is unknown.
+
+This method can take many attempts to succeed. If anyone is able to improve the consistency, please let me know.
+
 <a id="toc"></a>
 - [Resources](#user-content-resources)
 - [Prerequisites](#user-content-prerequisites)
