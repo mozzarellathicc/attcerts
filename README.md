@@ -1,6 +1,8 @@
-# BGW210 4.22.5 Cert Extraction
+# BGW210 4.23.4 Cert Extraction
 
 Exploit works on the BGW210. Status on other devices is unknown.
+
+BGW320: Firmware 3.18.1 does NOT work.
 
 This method can take many attempts to succeed. If anyone is able to improve the consistency, please let me know.
 
