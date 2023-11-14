@@ -134,14 +134,14 @@ From the computer's terminal, run:
 
 [↑ Return to menu](#toc)
 ## Extract mfg.dat
-This will likely take many tries. Running multiple terminal instances is highly recommended (6-8 should be enough).
+This will likely take several tries. The updated version of the script by [@mdonohue](https://github.com/mdonohue) should require only one terminal open.
 
 1. Unplug the RG's power cable.
-2. On each terminal, run:
+2. In the terminal, run:
    - `./get_mfg_dat.sh`.
 3. Plug in the RG's power cable again.
 4. Repeat until successful. The mfg.dat file should be bigger than 200kb.
-5. Stop the script by either exiting the terminal(s) or pressing `Ctrl+C`.
+5. Stop the script by either exiting the terminal or pressing `Ctrl+C`.
 6. Copy the mfg.dat file and all three \*.der files to the same directory as **mfg_dat_decode**
 7. Run mfg_dat_decode
 8. If there's no error, the certificates will have been extracted and decoded successfully.
@@ -159,5 +159,6 @@ This will likely take many tries. Running multiple terminal instances is highly 
   - @up_n_atom – \*.der file locations
 - [Derek Abdine](https://derekabdine.com/blog/2022-arris-advisory.html) – CVE Write-up
 - [devicelocksmith](https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html) – mfg_dat_decode
+- [mdonohue](https://github.com/mdonohue) – Optimization of get_mfg_dat.sh
 
 [↑ Return to menu](#toc)
