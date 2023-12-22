@@ -29,6 +29,7 @@ This method can take many attempts to succeed. If anyone is able to improve the 
 ## Prerequisites
 1. Residential Gateway (RG) vulnerable to the muhttpd path traversal exploit
    - This guide was written for the BGW210.
+   - As of December 2023, confirmed downgrade works from firmware 4.25.5
    - It has not been tested on the BGW320 or any of the NVG line.
 2. Device with an ethernet port
 3. Basic knowledge of commandline
@@ -58,7 +59,7 @@ Download the provided [resources](#resources) before proceeding. Ensure the scri
             <ul>
                 <li>IP address:
                     <ul>
-                        <li>192.1.168.x (i.e., 192.1.168.200)</li>
+                        <li>192.168.1.x (i.e., 192.168.1.200)</li>
                     </ul>
                 </li>
                 <li>Subnet prefix length:
@@ -91,7 +92,7 @@ Download the provided [resources](#resources) before proceeding. Ensure the scri
             <ul>
                 <li>IP address:  
                     <ul>
-                        <li>192.1.168.x (i.e., 192.1.168.200)</li>
+                        <li>192.168.1.x (i.e., 192.168.1.200)</li>
                     </ul>
                 </li>
                 <li>Subnet Mask:
