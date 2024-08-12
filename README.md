@@ -1,3 +1,6 @@
+> [!WARNING]
+> This repository is no longer maintained. Please refer to https://github.com/0x888e/certs for a very well-made and up-to-date guide.
+ 
 # BGW210 4.23.4 Cert Extraction
 
 Exploit works on the BGW210. Status on other devices is unknown.
